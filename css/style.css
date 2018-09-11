@@ -1,0 +1,31 @@
+/* Author: MaestroJolly */
+
+body {
+    text-align: center;
+}
+
+/* class for app name */
+.app-name {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 28px;
+    color: #5DADE2;
+}
+
+/* class for score and level div*/
+.score-level {
+    margin: 0 auto;
+    width: 50%;
+}
+
+/* class for game level */
+.level-number {
+    font-size: 25px;
+    color: #5DADE2;
+}
+
+/* class for game score */
+
+.score {
+    text-align: center;
+    font-size: 20px;
+}
