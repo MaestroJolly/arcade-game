@@ -6,13 +6,22 @@ Arcade Game Or Frogger Game is a simple web based game coded in HTML, CSS and Ob
 ## Table of Contents
 
 * [Instructions](#instructions)
-* [How To Play](#how_to_play)
+* [Extra Features](#extrafeatures)
+* [How To Play](#howtoplay)
 * [Contributing](#contributing)
 * [Link](#link)
 
 ## Instructions
 
 Arcade Game is a Web based game that can run on every browser (Google Chrome, Mozilla, Microsoft Edge etc.) and also responsive on multiple devices.
+
+## Extra Features
+
+The extra features in this arcade game includes;
+
+* Score System.
+* Level System.
+* Sound System with mute and unmute functionalities.
 
 ## How To Play
 

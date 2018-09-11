@@ -5,18 +5,25 @@
     <meta charset="UTF-8">
     <title>Effective JavaScript: Frogger</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="app-name">
-        <h3>Classic Arcade Game</h3>
-    </div>
-    <div class="score-level">
+        <h4>Classic Arcade Game</h4>
         <p class="level-number">Level </p>
-        <span class="score">Score:</span>
     </div>
-    <div>
-        <p class="mute">mute</p>
+    <div class="score-level-sound">
+        <div class="score-level">
+            <p class="score">Score:</p>
+        </div>
+        <div class="mute">
+            <span class="sound-title">
+                Sound: 
+                <i class="fa fa-volume-up fa-2x mute-blue-color"></i>
+                <i class="fa fa-volume-off fa-2x hide-mute mute-red-color"></i>
+            </span>
+        </div>
     </div>
     <script src="js/resources.js"></script>
     <script src="js/app.js"></script>

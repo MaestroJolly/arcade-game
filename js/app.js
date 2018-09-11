@@ -2,9 +2,12 @@
 
 let score = 0;
 let level = 1;
-let mute = document.querySelector(".mute");
+// let mute = document.querySelector(".mute");
+// let unMute = document.querySelector(".unmute");
 let levelNumber = document.querySelector(".level-number");
 let scoreDisplay = document.querySelector(".score");
+let muteSound = document.querySelector(".fa-volume-up");
+let unMuteSound = document.querySelector(".fa-volume-off");
 
 let levelName = levelNumber.textContent;
 let theLevelName = `${levelName} ${level}`;
@@ -13,6 +16,7 @@ levelNumber.innerHTML = theLevelName;
 let scoreLabel = scoreDisplay.textContent;
 let theScore = `${scoreLabel} ${score}`;
 scoreDisplay.innerHTML = theScore;
+
 
 // construction function for game sound
 
@@ -99,7 +103,7 @@ Player.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-    	if (player.y < 20) {
+    	if (player.y < -30) {
             addOne();
         }
 };
@@ -116,11 +120,11 @@ Player.prototype.handleInput = function (navInput){
         if (navInput == 'right' && this.x < 400) {
             this.x += 100;
         }
-        if (navInput == 'up' && this.y > 3) {
-            this.y -= 100;
+        if (navInput == 'up' && this.y > -30) {
+            this.y -= 90;
         }
         if (navInput == 'down' && this.y < 400) {
-            this.y += 100;
+            this.y += 90;
         }
 }
 
@@ -157,6 +161,25 @@ function removeOne() {
     collisionSound.play();
     player.reset();
 }
+
+muteSound.addEventListener("click", function(){
+    this.classList.toggle("hide-mute");
+    unMuteSound.classList.toggle("hide-mute");
+    gameSound.sound.muted = true;
+    collisionSound.sound.muted = true;
+    playerSound.sound.muted = true;
+    console.log(this);
+    console.log(unMuteSound);
+});
+
+unMuteSound.addEventListener("click", function(){
+    this.classList.toggle("hide-mute");
+    muteSound.classList.toggle("hide-mute");
+    gameSound.sound.muted = false;
+    collisionSound.sound.muted = false;
+    playerSound.sound.muted = false;
+    console.log(this);
+});
 
 // Now write your own player class
 // This class requires an update(), render() and
