@@ -1,3 +1,5 @@
+'use strict';
+
 // variables for score, levels, score and level DOM selection
 
 let score = 0;
